@@ -1,4 +1,4 @@
-# Calculando o IMC do joão (pré definido)
+# Calculando o IMC do joão (pré-definido)
 
 nome = "joão" 
 anos = 15
