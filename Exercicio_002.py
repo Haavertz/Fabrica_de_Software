@@ -1,5 +1,5 @@
 
-#Crie um programa que receba trÊS vakires. Imprima a soma dos dois primeiros multiplicada pelo terceiro.
+#Crie um programa que receba três valores. Imprima a soma dos dois primeiros multiplicada pelo terceiro.
 
 valor = 5
 valor2 = 10
