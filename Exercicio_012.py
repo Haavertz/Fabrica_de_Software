@@ -4,7 +4,7 @@ serie = input("Serie do aluno: ")
 escola = input("Escola do aluno: ")
 cidade = input("Qual a cidade do aluno: ")
 
-
+#Calcular a media do aluno com input
 
 nota1 = int(input("Qual o valor da primeira nota? "))
 nota2 = int(input("Qual o valor da segunda nota? "))
