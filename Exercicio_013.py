@@ -17,4 +17,10 @@ horas = float(input("Quantas horas você trabalha por mês? "))
 result = salario*horas
 print ("O valor que você ganha por horas é %.2f e a quantidade de horas é %.2f por fim o valor em quatro casas descimais são %.2f" % (salario,horas,result))
 
+#Pedir 2 numeros inteiros e um numero real.
 
+real1 = float(input("Me diga um numero real: "))
+int1 = int(input("Me diga um numero inteiro: "))
+int2 = int(input("Me diga um numero inteiro: "))
+
+print ("O valor real é %f e os inteiro são %d e %d." % (real1,int1,int2))
