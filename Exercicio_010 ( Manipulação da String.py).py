@@ -1,5 +1,5 @@
 a = "Gleison Morais"
-b = "gleissin"
+b = "Gleison"
 s = "Hello World!"
 
 
@@ -14,7 +14,7 @@ print(a.replace("Gleison","fon")) #Substitui a Variável
 print(a.find("Gleison")) 
 print(a.rfind("a"))
 print("Gleison"in a)
-print(a.count("a"))
+print(a.count("a")) #Contar quantas letras tem na variavel que a pessoa digitou
 print(s[-3]) #Caracteres direita pra esquerda 
 print(s[1:3]) #Do um ao terceiro
 print(s[:5]) #Do começo ao final
