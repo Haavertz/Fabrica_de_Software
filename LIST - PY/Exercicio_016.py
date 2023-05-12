@@ -22,3 +22,16 @@ print (frutas)
 frutas [0] = "pera"
 frutas [-1] = "laranja"
 print (frutas)
+
+#Substituir o casa por escola exercicio:
+
+lista = ["flor", "azul", [1,"casa"]]
+print (lista)
+lista [2][1] = "escola" #entrar na lista1, contar o "flor" como 0 e "azul" como 1, depois contar o (1) como 0 e o "casa" como 1
+print (lista)
+
+lista = ['a', 'b', 'c', 'd', 'e', 'f']
+print (lista)
+lista [1:3] = ['x', 'y'] #mudar o B e o C para X e Y
+print (lista)
+
