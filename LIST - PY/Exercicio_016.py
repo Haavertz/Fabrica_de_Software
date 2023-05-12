@@ -35,3 +35,20 @@ print (lista)
 lista [1:3] = ['x', 'y'] #mudar o B e o C para X e Y
 print (lista)
 
+lista = ['a', 'b', 'c', 'd', 'e', 'f']
+print (lista)
+print (len(lista))
+lista [1:3] = [] #Eliminar um elemento de uma lista
+print (lista)
+print (len(lista))
+
+lista = ['a', 'b', 'c', 'd', 'e', 'f']
+print (lista)
+print (len(lista))
+lista [1:1] = ['x'] #Desta forma ele irá Adicionar atrâs do B por X 
+print (lista)
+print (len(lista))
+
+lista = [4,2,8,6,5]
+lista[2] = [True]
+print (lista)
