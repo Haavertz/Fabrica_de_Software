@@ -23,7 +23,7 @@ print (a)
 #Insert espreme e coloca o 100 na posição que a pessoa colocou
 #Count (print (a.count)) quantas vezes vai aparecer determinada coisa
 
-a = [1,2,5,4,7,6]
+a = [1,8,5,4,7,6]
 a.sort ()
 print (a)
 
