@@ -6,4 +6,4 @@ if sexo=="M":
 elif sexo=="F":
     print ("Feminino")
 else:
-    print ("Não binario // transformers!")
+    print ("Não binario")
