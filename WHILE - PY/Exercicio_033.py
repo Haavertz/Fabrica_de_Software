@@ -110,4 +110,5 @@ while True:
         print ("="*10, "Fim - Divisão - Fim", "="*10)
         continue
     else: 
+        print ("Numero invalido!")
         break
