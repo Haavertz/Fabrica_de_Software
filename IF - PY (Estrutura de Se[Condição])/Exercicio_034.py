@@ -23,8 +23,8 @@ listidade = []
 cont=0
 listmatricula = []
 while True:
-  
-    op = input("1 - Cadastro\n 2 - Consulta\n 3 - Sair")
+    op = ("1 - Cadastro\n 2 - Consulta\n 0 - Sair")
+    op = input("")
     if op == '1':
         nome = input("Informe seu nome: ")
         listnome.append(nome)
@@ -97,4 +97,25 @@ while True:
         print(listidade(busca-1))
     if op == '0':
         break
-       
+    if op == '3':
+        print(listmatricula.pop(busca-1))
+        print(listnome.pop(busca-1))
+        print(listsobbrenome.pop(busca-1))
+        print(listbairro.pop(busca-1))
+        print(listcidade.pop(busca-1))
+        print(listestado.pop(busca-1))
+        print(listpais.pop(busca-1))
+        print(listfone.pop(busca-1))
+        print(listcpf.pop(busca-1))
+        print(listpeso.pop(busca-1))
+        print(listaltura.pop(busca-1))
+        print(listcartão.pop(busca-1))
+        print(listemail.pop(busca-1))
+        print(listcep.pop(busca-1))
+        print(listmedia.pop(busca-1))
+        print(listsérie.pop(busca-1))
+        print(listclasse.pop(busca-1))
+        print(listsexo.pop(busca-1))
+        print(listcor.pop(busca-1))
+        print(listendereço.pop(busca-1))
+        print(listidade.pop(busca-1))
