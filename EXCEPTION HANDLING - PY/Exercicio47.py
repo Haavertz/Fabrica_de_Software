@@ -38,7 +38,7 @@ while True:
             try:
                 destino = input("Digite seu Destino: ")
                 origem = input("Digite sua origem: ")
-                duração = int(input("Duração da sua viagem: "))
+                duracao = int(input("Duração da sua viagem: "))
                 valorPassagem = float(input("Digite o valor da passagem: "))
             except ValueError:
                 print ("O quê você digitou não e valido, favor digitar um NUMERO!")
@@ -61,7 +61,7 @@ while True:
                 ano = input("Digite o ano do avião: ")
                 horasDeVoou = int(input("Digite a quantidade de horas de voou: "))
                 cor = input("Digite a cor do avião: ")
-                QntPassageiros = int(input("Quantidade de Passageiros: "))
+                qntPassageiros = int(input("Quantidade de Passageiros: "))
             except ValueError:
                 print ("O quê você digitou não e valido, favor digitar um NUMERO!")
             except:
@@ -115,7 +115,7 @@ while True:
                     print ("="*20)
                     print (destino)
                     print (origem)
-                    print (duração)
+                    print (duracao)
                     print (valorPassagem, " Com desconto = ", valorComDesconto)
                     print ("="*20)
                     os.system("pause")
@@ -136,7 +136,7 @@ while True:
                     print (ano)
                     print (horasDeVoou)
                     print (cor)
-                    print (QntPassageiros)
+                    print (qntPassageiros)
                     print ("="*20)
                     os.system("pause")
                     os.system("cls")
@@ -165,45 +165,15 @@ while True:
                     continue
                 except:
                     print ("ERRO")
-            elif escolha2 == 5:
-                try:
-                    print ("="*20)
+            if escolha2 == 5:
                     print (nome)
                     print (sobrenome)
                     print (rg)
                     print (cpf)
-                    print ("="*20)
-                    print ("")
-                    print ("="*20)
+                    print ("===============")
                     print (destino)
                     print (origem)
-                    print (duração)
-                    print (valorPassagem, " Com desconto = ", valorComDesconto)
-                    print ("="*20)
-                    print ("")
-                    print ("="*20)
-                    print (modelo)
-                    print (ano)
-                    print (horasDeVoou)
-                    print (cor)
-                    print (QntPassageiros)
-                    print ("="*20)
-                    print ("")
-                    print ("="*20)
-                    print (nomeTripulação)
-                    print (cargo)
-                    print (idadeTripulação)
-                    print (dataDeAdmissão)
-                    print (fone)
-                    print ("="*20)
-                except ValueError:
-                    print ("Esta opção esta disponivel apenas se você fez todo o Cadastro!")
-                    os.system("pause")
-                    os.system("cls")
-                    continue
-                except:
-                    print ("ERRO")
-
+                    print (duracao)
 
 
     
