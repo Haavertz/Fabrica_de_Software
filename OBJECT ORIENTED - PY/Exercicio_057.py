@@ -13,4 +13,7 @@ while True:
     except:
         print("Valor Inválido")
     else:
-        convertionHora(hora,minutos)
+        if minutos > 59 or minutos <-0:
+             print ("valor de minutos invalido!")
+             continue
+        convertionHora (hora,minutos)
