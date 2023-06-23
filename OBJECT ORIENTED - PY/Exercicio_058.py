@@ -1,18 +1,58 @@
-diasEmAtraso= 0.01
-contador = 1
-def valorPagamento (valor,dias):
-    totalDeDias = dias*diasEmAtraso
-    
-    totatly = float((totalDeDias+0.03)+valor)
-    print ("O valor de dias por atraso é ", diasEmAtraso,"")
-    return totalDeDias,totatly
+import os
 
-while contador != 0:
-    print("0. Sair/mostrar")
-    print("1. Escolha para parcela e dias")
-    contador = int(input("Escolha: "))
-    if contador == 1:
-        valor = float(input("Digite o valor da parcela: "))
-        dias = int(input("Digite os dias: "))
-        valorFInal = valorPagamento(valor,dias)
-        print (valorFInal)
+def valorPagamento(x,y):
+    juros=(0.1*y)/100
+    multa=(x*0.03)
+    jurostotal=((x*juros)+multa)+x
+    return jurostotal
+
+prestações=[]
+diasAtraso=[]
+valorFinal=[]
+
+while True:
+    try:
+        print ("0. Sair/Mostrar")
+        a=float(input("Digite o valor a ser pago pela prestação: "))
+        b=int(input("Digite o número de dias de atraso: "))
+    except ValueError:
+        os.system("cls")
+        print("Erro! Digite somente números inteiros para os dias, e demais números para o valor da prestação.")
+        os.system("pause")
+        os.system("cls")
+    except:
+        os.system("cls")
+        print("Erro desconhecido.")
+        os.system("pause")
+        os.system("cls")
+    else:
+        if a==0:
+            os.system("cls")
+            break
+        elif a>0 and b>=0:
+            os.system("pause")
+            os.system("cls")
+            prestações.append(a)
+            diasAtraso.append(b)
+            c=valorPagamento(a,b)
+            valorFinal.append(c)
+            continue
+        else:
+            os.system("cls")
+            print("Valor não adicionado por conter números negativos. Por favor, tente novamente.")
+            os.system("pause")
+            os.system("cls")
+
+print("------------------------------- Relatório do Dia -------------------------------\nValores das Prestações em Ordem:")
+for i in prestações:
+    print("{:.2f}R$".format(i))
+print("\nDias de Atraso em Ordem:")
+for i in diasAtraso:
+    print(i)
+print("\nValores finais a serem pagados:")
+for i in valorFinal:
+    print("{:.2f}R$".format(i))
+valorFinalTotal=sum(valorFinal)
+print("Valor total somado: {:.2f}".format(valorFinalTotal))
+
+#Programa que lê e faz calculo de juros e multa de diversos valores.
