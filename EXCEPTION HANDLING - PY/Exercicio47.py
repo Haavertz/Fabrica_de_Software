@@ -1,4 +1,9 @@
 import os
+
+cont = 0 
+cont2 = 0
+cont3 = 0
+cont4 = 0
 while True:
     try:
         print ("0 - Sair/Mostrar")
@@ -22,6 +27,7 @@ while True:
                 sobrenome = input("Digite seu Sobrenome: ")
                 rg = float(input("Digite seu RG: "))
                 cpf = float(input("Digite seu CPF: "))
+                cont = cont + 1
                 os.system("pause")
                 os.system("cls")
             except ValueError:
@@ -40,6 +46,7 @@ while True:
                 origem = input("Digite sua origem: ")
                 duracao = int(input("Duração da sua viagem: "))
                 valorPassagem = float(input("Digite o valor da passagem: "))
+                cont2 = cont2 + 1
             except ValueError:
                 print ("O quê você digitou não e valido, favor digitar um NUMERO!")
             except:
@@ -62,6 +69,7 @@ while True:
                 horasDeVoou = int(input("Digite a quantidade de horas de voou: "))
                 cor = input("Digite a cor do avião: ")
                 qntPassageiros = int(input("Quantidade de Passageiros: "))
+                cont3 = cont3 + 1
             except ValueError:
                 print ("O quê você digitou não e valido, favor digitar um NUMERO!")
             except:
@@ -76,6 +84,7 @@ while True:
                 idadeTripulação = int(input("Idade da Tripulação: "))
                 dataDeAdmissão = input("Data de Admissão")
                 fone = int(input("Fone: "))
+                cont4 = cont4 + 1
             except ValueError:
                 print ("O quê você digitou não e valido, favor digitar um NUMERO!")
             except:
@@ -92,80 +101,108 @@ while True:
             print ("5 - Relatorio TODOS!")
             escolha2 = int(input("ESCOLHA: "))
             if escolha2 == 1:
-                try:
-                    print ("="*20)
-                    print (nome)
-                    print (sobrenome)
-                    print (rg)
-                    print (cpf)
-                    print ("="*20)
-                    os.system("pause")
-                    os.system("cls")
-                except ValueError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
-                    os.system("pause")
-                    os.system("cls")
-                    continue
-                except NameError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
-                except:
-                    print ("ERRO")
+                if cont > 0:
+                    try:
+                        print ("="*20)
+                        print (nome)
+                        print (sobrenome)
+                        print (rg)
+                        print (cpf)
+                        print ("="*20)
+                        os.system("pause")
+                        os.system("cls")
+                    except ValueError:
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                        os.system("pause")
+                        os.system("cls")
+                        continue
+                    except NameError:
+                        os.system("pause")
+                        os.system("cls")
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                    except:
+                        print ("ERRO")
+                else:
+                     print ("Não temos esses dados")
+                     os.system("pause")
+                     os.system("cls")
             elif escolha2 == 2:
-                try:
-                    print ("="*20)
-                    print (destino)
-                    print (origem)
-                    print (duracao)
-                    print (valorPassagem, " Com desconto = ", valorComDesconto)
-                    print ("="*20)
-                    os.system("pause")
-                    os.system("cls")
-                except ValueError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
-                    os.system("pause")
-                    os.system("cls")
-                    continue
-                except NameError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
-                except:
-                    print ("ERRO")
+                if cont2 > 0:
+                    try:
+                        print ("="*20)
+                        print (destino)
+                        print (origem)
+                        print (duracao)
+                        print (valorPassagem, " Com desconto = ", valorComDesconto)
+                        print ("="*20)
+                        os.system("pause")
+                        os.system("cls")
+                    except ValueError:
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                        os.system("pause")
+                        os.system("cls")
+                        continue
+                    except NameError:
+                        os.system("pause")
+                        os.system("cls")
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                    except:
+                        print ("ERRO")
+                else:
+                     print ("Nao temos esses dados")
+                     os.system("pause")
+                     os.system("cls")
             elif escolha2 == 3:
-                try:
-                    print ("="*20)
-                    print (modelo)
-                    print (ano)
-                    print (horasDeVoou)
-                    print (cor)
-                    print (qntPassageiros)
-                    print ("="*20)
+                if cont3 > 0: 
+                    try:
+                        print ("="*20)
+                        print (modelo)
+                        print (ano)
+                        print (horasDeVoou)
+                        print (cor)
+                        print (qntPassageiros)
+                        print ("="*20)
+                        os.system("pause")
+                        os.system("cls")
+                    except ValueError:
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                        os.system("pause")
+                        os.system("cls")
+                        continue
+                    except NameError:
+                        os.system("pause")
+                        os.system("cls")
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                else:
+                    print ("Não temos esses dados!")
                     os.system("pause")
                     os.system("cls")
-                except ValueError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
-                    os.system("pause")
-                    os.system("cls")
-                    continue
-                except NameError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
             elif escolha2 == 4:
-                try:
-                    print ("="*20)
-                    print (nomeTripulação)
-                    print (cargo)
-                    print (idadeTripulação)
-                    print (dataDeAdmissão)
-                    print (fone)
-                    print ("="*20)
+                if cont4 > 0:          
+                    try:
+                        print ("="*20)
+                        print (nomeTripulação)
+                        print (cargo)
+                        print (idadeTripulação)
+                        print (dataDeAdmissão)
+                        print (fone)
+                        print ("="*20)
+                        os.system("pause")
+                        os.system("cls")
+                    except ValueError:
+                        print ("Este dado não esta cadastrado. Tente novamente.")
+                        os.system("pause")
+                        os.system("cls")
+                        continue
+                    except:
+                        print ("ERRO")
+                else:
+                    print ("Não temos esses dados")
                     os.system("pause")
                     os.system("cls")
-                except ValueError:
-                    print ("Este dado não esta cadastrado. Tente novamente.")
-                    os.system("pause")
-                    os.system("cls")
-                    continue
-                except:
-                    print ("ERRO")
             if escolha2 == 5:
+                try:
+                    print ("===============")
                     print (nome)
                     print (sobrenome)
                     print (rg)
@@ -174,6 +211,27 @@ while True:
                     print (destino)
                     print (origem)
                     print (duracao)
+                    print (valorPassagem, " Com desconto = ", valorComDesconto)
+                    print ("===============")
+                    print (modelo)
+                    print (ano)
+                    print (horasDeVoou)
+                    print (cor)
+                    print (qntPassageiros)
+                    print ("===============")
+                    print (nomeTripulação)
+                    print (cargo)
+                    print (idadeTripulação)
+                    print (dataDeAdmissão)
+                    print (fone)
+                    print ("===============")
+                    os.system("pause")
+                    os.system("cls")
+                except:
+                    print ("Algum dos valores estão faltando")
+                    os.system("pause")
+                    os.system("cls")
+
 
 
     
