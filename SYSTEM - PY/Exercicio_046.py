@@ -3,12 +3,11 @@ while True:
     
     print("*",70*"-","*")
     print("|",70*" ","|")
-    print(("|"+13*" "+"Seja Bem Vindo a Calculadora feita para você!!"+13*" "+"|")) # seja bem vindo
+    print(("|"+13*" "+"Seja Bem Vindo a Calculadora feita para você!!"+13*" "+"|"))
     print("|",70*" ","|")
     print("*",70*"-","*")
 
     print()
-    # aqui vai ser o numeros e etc...
     print("* ",68*"="," *\n")
     print(("|"+17*" "+"|"+" "+17*" "+"|"+17*" "+"|"+17*" "+"|\n")*2)
     print(("|"+7*" "+"A.Q"+7*" "+"|"+7*" "+"R.Q"+8*" "+"|"+8*" "+"/"+8*" "+"|"+8*" "+"*"+8*" "+"|")) 
