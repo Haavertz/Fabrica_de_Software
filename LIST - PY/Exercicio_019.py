@@ -23,7 +23,6 @@ listidade = []
 cont=0
 listmatricula = []
 while True:
-  
     op = input("1 - Cadastro\n 2 - Consulta\n 3 - Sair")
     if op == '1':
         nome = input("Informe seu nome: ")

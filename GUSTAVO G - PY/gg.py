@@ -4,10 +4,8 @@ def tracos ():
 
 def calcularLargAltura (altura, largura):
     soma = altura * largura
-    print ("Valor da altura A= %f e da Largura %f é de %f" %(altura,largura,soma)) 
+    print ("Valor da altura A= %.2f e da Largura %.2f é de %.2f" %(altura,largura,soma)) 
     print (soma)
-
-
 
 valor1 = float(input("Porfavor digite o valor da Altura (m): "))
 valor2 = float(input("Porfavor digite o valor da Largura (m): "))
