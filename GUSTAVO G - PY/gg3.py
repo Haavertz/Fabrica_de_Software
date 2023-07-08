@@ -1,26 +1,18 @@
-import os
+from random import randint
 
-#Vai pega o maior numero e mostrar quantos numeros foram digitados
+def sorteio():
+    valor1=0
+    for valor1 in range(0,5):
+        a = randint(0,100)
+    print (a)
 
-def maior (* num):
-    cont = 0
-    list1 = []
+
+def somaPar(* num):
+    soma = 0
     for valor in num:
-        cont += + 1
-        list1.append(valor)
-        print (valor)
-    print (f"A quantidade de valores digitados foram de: {cont}")
-    print ("O maior numero foi ", max(list1))
+        if valor % 2 == 0:
+            soma += + valor
+    print (soma)
 
-
-while True:
-    print ("DIGITE UMA LETRA PARA SAIR!")
-    try:
-        a = int(input("Digite um numero para inicio: "))
-        totaltly = maior (a)
-    except:
-        os.system("cls")
-        print (totaltly)
-        print ("Obrigado por usar o sistema!")
-        break
-            
+somaPar(2,4,5,6,10)
+sorteio()
