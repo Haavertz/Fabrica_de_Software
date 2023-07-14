@@ -1,9 +1,10 @@
 class Conta:
-    def __init__(self, nome, cpf, saldo, senha):
+    def __init__(self, nome, cpf, saldo, senha, valor2):
         self.nome = nome
         self.__cpf = cpf
         self.__saldo = saldo
         self.__senha = senha
+        self.__valor2 = valor2
         
     def depositar(self, newvalor):
         self.__newvalor = newvalor
@@ -18,6 +19,7 @@ class Conta:
             print("Senha Invalido!")
 
     def sacar(self, senha):
+
         if senha == self.__senha:
             print(f"O seu saldo é: {self.__saldo}")
             return
