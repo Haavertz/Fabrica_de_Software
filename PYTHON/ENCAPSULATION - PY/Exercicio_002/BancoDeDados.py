@@ -7,11 +7,11 @@ class BaseDeDados():
         if "clientes" not in self.dados:
             self.dados["Clientes"] = {id:nome}
         else:
-            self.dados["Clientes"].update({id:nome})
+            self.dados["Clientes"]({id:nome})
     
     def listar_dados(self):
         for nome,id in self.dados["Clientes"].items():
             print(nome,id)
 
-    def apagarclinete(self):
+    def apagarcliente(self, id):
         del self.dados["Clientes"][id]
