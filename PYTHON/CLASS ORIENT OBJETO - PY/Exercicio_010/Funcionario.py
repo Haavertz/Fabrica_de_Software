@@ -13,12 +13,12 @@ class Aluno():
         self.__listaluno = self.nome
     def Advertencia():
         aluno = input("Digite o aluno: ")
-        aluno[] = (aluno.append())
-        if aluno in aluno:
+        aluno[""] = (aluno.append())
+        # if aluno in aluno:
             
-            pass
+        #     pass
 
-        pass
+        # pass
 
 class Professor(Pessoa):
     def __init__(self, nome, cpf, fone, salario):
@@ -50,12 +50,16 @@ class Coodenador(Professor):
         print(f"{self.nome} o quê você gostaria de fazer? ")
         print("( 1 ) - Contratar professor")
         print("( 2 ) - Dar advertência")
-        escolha1 = input("Escolha: ")
+        escolha1 = int(input("Escolha: "))
         if escolha1 == 1:
             super().Contratar()
         elif escolha1 == 2:
-            
             pass
+        else:
+            print("Valor invalido!")
+            # os.system("cls")
+            # os.system("pause")
+            # return
 
 class Limpeza(Coodenador):
     def __init__(self, nome, cpf, fone, salario):
