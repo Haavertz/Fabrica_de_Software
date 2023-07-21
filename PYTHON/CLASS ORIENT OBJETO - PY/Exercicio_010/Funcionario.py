@@ -12,6 +12,7 @@ class Aluno():
         self.listaluno = listaluno 
         print(f"Olá {self.nome} você esta estudando... ")
         self.__listaluno = self.nome
+
     #Parte do Coodenador
     def Advertencia():
         aluno = input("Digite o aluno: ")
@@ -21,16 +22,21 @@ class Professor(Pessoa):
     def __init__(self, nome, cpf, fone, salario):
         super().__init__(nome, cpf, fone)
         self.__salario = salario
-    
+   
+    #Parte do Coodenador
     def Contratar(self):
         disprofessor = {}
         nome = input("DIgite o nome do professor: ")
         materia = input("DIgite a materia do professor: ")
         number = input("Numero do professor: ")
         disprofessor[number] = {nome:materia}
+
         for i in disprofessor:
             print (i)
-            print(disprofessor[number])
+            a = input(":")
+            print(disprofessor.values())
+        os.system("pause")
+        os.system("cls")
 
     def Nota(self):
         disaluno = {}
@@ -50,7 +56,8 @@ class Coodenador(Professor):
     def __init__(self, nome, cpf, fone, salario):
         super().__init__(nome,cpf,fone, salario)
         self.__salario = salario
-        print(f"{self.nome} o quê você gostaria de fazer? ")
+        print(f"{self.nome} o quê você gostaria de fazer como coodenador? ")
+        print("( 0 ) - Sair")
         print("( 1 ) - Contratar professor")
         print("( 2 ) - Dar advertência")
         print("( 3 ) - Mostrar salario")
@@ -60,13 +67,22 @@ class Coodenador(Professor):
         except:
             print("Valor invalido")
             return Coodenador(nome, cpf, fone, salario)
-        if escolha1 == 1:
+        if escolha1 == 0:
+            print("Saindo da opcao...")
+            
+        elif escolha1 == 1:
             super().Contratar()
+            return Coodenador(nome, cpf, fone, salario)
+
         elif escolha1 == 2:
             nome = input("Como é o nome do aluno: ")
             super().Advertencia(nome)
+            return Coodenador(nome, cpf, fone, salario)
+
         elif escolha1 == 3:
             print(f"Seu salario é de: {self.__salario} ")
+            return Coodenador(nome, cpf, fone, salario)
+
         else:
             print("Valor invalido!")
             os.system("pause")
@@ -80,6 +96,7 @@ class Limpeza():
         self.__fone = fone
         self.__salario = salario
         self.__valor = False
+
     def limparVassoura(self):
         if self.__valor == False:
             print(f"{self.nome} Comecou a varrer com a Vassoura.")
@@ -93,12 +110,12 @@ class Limpeza():
     def Salario(self):
         print(f"Seu salario é de: {self.__salario}")
 
-c1 = Limpeza("Gleison", 123, 321, 1200)
-c1.limparVassoura()
-c1.PararDeVarrer()
-c1.limparVassoura()
-c1.limparVassoura()
-c1.Salario()
+c1 = Coodenador("Gleison", 123, 321, 1200)
+c1.Contratar()
+# c1.PararDeVarrer()
+# c1.limparVassoura()
+# c1.limparVassoura()
+# c1.Salario()
 # c1.MostraSalario()
 # p1 = Aluno("GLeison")
 
