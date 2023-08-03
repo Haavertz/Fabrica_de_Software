@@ -6,13 +6,12 @@ import sys
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Progamin")
+        self.setWindowTitle("Exercicio - 1")
         self.setFixedSize(600,400)
         self.lbl = QLabel("Hello World")
         font = self.lbl.font()
-        font.setPointSize(35)
+        font.setPointSize(20)
         self.lbl.setFont(font)
-        self.lbl.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
         self.setCentralWidget(self.lbl)
 
 
