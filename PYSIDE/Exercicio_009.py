@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Imagem")
         self.label = QLabel()
         self.label.setPixmap(QPixmap("images.jpg"))
-        self.label.setScaledContents(True)
+        self.label.setGeometry(400,400,200,200)
         self.setCentralWidget(self.label)
 
 

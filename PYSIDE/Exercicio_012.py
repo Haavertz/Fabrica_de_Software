@@ -32,7 +32,8 @@ class MainWindow(QMainWindow):
         # self.Cadastro.clicked.connect(self.All)
         
     def All(self):
-        
+        self.alt = QLabel()
+        self.alt.setWidget
         
         pass
     def quadrati(self): 
