@@ -25,8 +25,8 @@ class MainWindow(QMainWindow):
         
     def Somar(self):
         tot = soma(
-    
-        )
+            
+            )
         
 
 
