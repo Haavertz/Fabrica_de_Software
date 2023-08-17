@@ -12,8 +12,8 @@ class MainWindow(QWidget):
     def initUI(self):
         self.setWindowTitle("Poketex")
         
-        self.button_pikachu = QPushButton('Pikachu')
-        self.button_caramelo = QPushButton('Caramelo')
+        self.button_pikachu = QPushButton('Cat')
+        self.button_caramelo = QPushButton('Dog')
         
         self.image_frame = QFrame(self)
         self.image_frame.setFrameShape(QFrame.Box)
@@ -23,6 +23,7 @@ class MainWindow(QWidget):
         self.image_label = QLabel(self.image_frame)
         self.image_label.setAlignment(Qt.AlignCenter)
         self.image_frame.layout().addWidget(self.image_label)
+        # self.image_label.setScaledContents(True)
         
         layout = QVBoxLayout()
         layout.addWidget(self.button_pikachu)
