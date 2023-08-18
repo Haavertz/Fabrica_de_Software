@@ -10,8 +10,8 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("ExercicioMain - 15")
         self.setFixedSize(600,600)
-        self.button1 = QLineEdit(int(self))
-        self.button2 = QLineEdit(int(self))
+        self.button1 = QLineEdit(self)
+        self.button2 = QLineEdit(self)
         self.button3 = QPushButton("Somando...",self)
         self.button4 = QPushButton("Total",self)
         
