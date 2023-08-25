@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow, QLabel, QLineEdit
-from PyQt5.QtCore import Qt, QSize
+from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow, QLabel, QLineEdit
+from PySide6.QtCore import Qt, QSize
 import sys
 
 
