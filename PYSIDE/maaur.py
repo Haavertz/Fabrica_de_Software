@@ -22,13 +22,12 @@ class MainWindow(QWidget):
         
         self.image_label = QLabel(self.image_frame)
         self.image_label.setAlignment(Qt.AlignCenter)
-        self.image_frame.layout().addWidget(self.image_label)
         # self.image_label.setScaledContents(True)
         
         layout = QVBoxLayout()
         layout.addWidget(self.button_pikachu)
         layout.addWidget(self.button_caramelo)
-        layout.addWidget(self.image_frame)
+
         
         self.button_pikachu.clicked.connect(self.display_pikachu)
         self.button_caramelo.clicked.connect(self.display_caramelo)
@@ -43,10 +42,9 @@ class MainWindow(QWidget):
         pixmap = QPixmap('images.jpg')
         self.image(pixmap)
         
-    def image(self, pixmap):
-        #scale_pixmap = pixmap.scaled(600,400, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+    def image(self):
         self.image_label.setScaledContents(True)
-        self.image_label.setPixmap(pixmap)
+        self.image_label.setPixmap(QPixmap("Catjpg.jpg"))
         
        
         
