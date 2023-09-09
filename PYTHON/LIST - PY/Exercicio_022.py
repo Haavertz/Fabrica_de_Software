@@ -1,7 +1,8 @@
 MatrixA = [[2,3]]
-MatrixB = []
-print(MatrixA)
+MatrixB = [2,3]
 
-MatrixB.append([MatrixA.reverse()])
+print(MatrixB.reverse())
 
-print(MatrixB)
+# MatrixB.append([MatrixA.reverse()])
+
+# print(MatrixB)

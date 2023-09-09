@@ -8,6 +8,7 @@ def sorteio():
 
 
 def somaPar(* num):
+    print(num)
     soma = 0
     for valor in num:
         if valor % 2 == 0:

@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow 
+from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow 
 import sys
 
 class MainWindow(QMainWindow):
@@ -8,6 +8,7 @@ class MainWindow(QMainWindow):
 		button = QPushButton("Jho soy um butão")
 		self.setCentralWidget(button)
 		button.clicked.connect(self.imprimir)
+		
 	def imprimir(self):
 		print("Gleison")
 

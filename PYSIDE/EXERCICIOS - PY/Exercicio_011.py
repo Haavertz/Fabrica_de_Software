@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QCheckBox, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QCheckBox, QVBoxLayout, QWidget
 import sys
 
 class MainWindow(QMainWindow):

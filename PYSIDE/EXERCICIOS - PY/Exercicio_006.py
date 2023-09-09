@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit, QLabel
-from PyQt5.QtCore import Qt, QSize
+from PySide6.QtWidgets import QApplication, QMainWindow, QLineEdit, QLabel
+from PySide6.QtCore import Qt, QSize
 import sys
 
 class MainWindow(QMainWindow):
