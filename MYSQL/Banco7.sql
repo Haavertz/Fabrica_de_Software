@@ -18,7 +18,7 @@ create table produtos(
 create table clientes (
     id_cli int auto_increment,
     nome varchar(100) not null,
-    cpf int not null,
+    cpf varchar(15) not null,
     telefone varchar(50),
     sexo enum('F','M'),
     cadastro varchar (300),
@@ -91,4 +91,6 @@ insert into estoque_produtos values (null,100,5,4);
 insert into estoque_produtos values (null,100,5,5);
 
 select * from estoque_produtos;
+
+
 
