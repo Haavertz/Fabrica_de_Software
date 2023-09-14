@@ -9,6 +9,7 @@ while a != 7:
     b = int(input("Digite um valor de 0 a 10: "))
     if b >= 0 and b <= 10:
         if b == 7:
+            print("Valor correto!")
             a = b
         else:
             print("Valor invalido! Tente novamente...")
