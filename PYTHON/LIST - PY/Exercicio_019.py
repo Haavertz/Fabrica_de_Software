@@ -73,7 +73,7 @@ while True:
         listmatricula.append(cont)
     if op == '2':
         busca = int(input("Digite a Matricula"))
-        print(listmatricula(busca-1))
+        print(listmatricula(busca[-1]))
         print(listnome(busca-1))
         print(listsobbrenome(busca-1))
         print(listbairro(busca-1))

@@ -5,6 +5,7 @@ from PySide6.QtWidgets import (QApplication, QVBoxLayout,
 QMainWindow, QLabel, QLineEdit, QWidget, QFrame, QPushButton)
 from PySide6.QtGui import QIntValidator, QFont
 
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()

@@ -31,4 +31,4 @@ for i in list:
         print(l)
         if type(l) in list:
             for d in l:
-                print(d)
+                print(d,"ini")
