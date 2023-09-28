@@ -2,11 +2,13 @@
 create database vendas;
 use vendas;
 
+
 CREATE TABLE CIDADE (
     CODCID   INTEGER NOT NULL,
     NOMECID  VARCHAR(60),
     UF       CHAR(2)
 );
+
 
 CREATE TABLE CLIENTE (
     CODCLI    INTEGER NOT NULL,
@@ -150,6 +152,8 @@ INSERT INTO PRODUTO (CODPROD, DESCRICAO, UNIDADE, VALOR_UN) VALUES (18, 'PULVERI
 INSERT INTO PRODUTO (CODPROD, DESCRICAO, UNIDADE, VALOR_UN) VALUES (19, 'CHAPEU DE PALHA', 'UN ', 34);
 INSERT INTO PRODUTO (CODPROD, DESCRICAO, UNIDADE, VALOR_UN) VALUES (20, 'LUVA DE BORRACHA', 'UN ', 2);
 
+
+
 COMMIT WORK;
 
 INSERT INTO ITEMPEDIDO (NUMPED, CODPROD, QTDADE) VALUES (1, 1, 1);
@@ -209,3 +213,40 @@ ALTER TABLE PEDIDO ADD CONSTRAINT FK_PEDIDO_1 FOREIGN KEY (CODCLI) REFERENCES CL
 ALTER TABLE PEDIDO ADD CONSTRAINT FK_PEDIDO_2 FOREIGN KEY (CODVEND) REFERENCES VENDEDOR (CODVEND);
 ALTER TABLE VENDEDOR ADD CONSTRAINT FK_VENDEDOR_1 FOREIGN KEY (CODSETOR) REFERENCES SETOR (CODSETOR);
 
+ALTER TABLE CLIENTE ADD CONSTRAINT FK_CLIENTE_1 FOREIGN KEY (CODCID) REFERENCES CIDADE (CODCID);
+
+
+/******************************************************************************/
+/*                                RESPOSTA                                    */
+/******************************************************************************/
+
+#1
+select count(CODCID) from CIDADE;
+#2
+select count(CODCLI) from CLIENTE;
+#3
+select count(CODPROD) from PRODUTO;
+#4
+select count(CODSETOR) from SETOR;
+#5
+select count(NUMPED) from PEDIDO;
+#6
+select max(SALARIO) from VENDEDOR;
+#7
+select NOMEVEND from VENDEDOR where SALARIO =(select max(SALARIO) from VENDEDOR);
+#8
+select min(SALARIO) from VENDEDOR;
+#9
+select NOMEVEND from VENDEDOR where SALARIO =(select min(SALARIO) from VENDEDOR);
+#10
+select max(ENTREGA) from PEDIDO;
+#11
+select min(ENTREGA) from PEDIDO;
+#12
+select DESCRICAO from PRODUTO where VALOR_UN = (select min(VALOR_UN) from PRODUTO);
+#13
+select DESCRICAO from PRODUTO where VALOR_UN = (select max(VALOR_UN) from PRODUTO);
+#14
+select * from VENDEDOR where CODSETOR = 4;
+#15
+select NUMPED from PEDIDO where CODCLI = 5;
