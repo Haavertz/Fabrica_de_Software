@@ -1,6 +1,10 @@
 create database Netflix_Original;
 use Netflix_Original;
 
+#============================================================
+# Tables
+#============================================================
+
 create table Title(
 ID_TITLE int auto_increment,
 TITULOS varchar(500) NOT NULL,
@@ -26,6 +30,7 @@ primary key (ID_LINGUAGEM)
 );
 
 create table Filmes (
+ID_AUTO int auto_increment primary key,
 ID_TITLE int not null,
 ID_GENRE int not null,
 ID_IMDB int not null,
@@ -41,6 +46,7 @@ constraint foreign key (ID_LINGUAGEM) references Linguagem(ID_LINGUAGEM)
 #============================================================
 # Title
 #============================================================
+
 INSERT INTO Title(TITULOS) values ('The App');
 INSERT INTO Title(TITULOS) values ('The Open House');
 INSERT INTO Title(TITULOS) values ('Kaali Khuhi');
@@ -2977,6 +2983,11 @@ INSERT INTO Filmes(ID_TITLE, ID_GENRE, ID_IMDB, ID_Linguagem) values (580,580,58
 INSERT INTO Filmes(ID_TITLE, ID_GENRE, ID_IMDB, ID_Linguagem) values (581,581,581,581);
 INSERT INTO Filmes(ID_TITLE, ID_GENRE, ID_IMDB, ID_Linguagem) values (582,582,582,582);
 
+SET SQL_SAFE_UPDATES = 0;
+
+#============================================================
+# Selects Describe
+#============================================================
 
 select * from Title;
 select * from Genre;
@@ -2984,15 +2995,47 @@ select * from IMDB_Score;
 select * from Linguagem;
 select * from Filmes;
 
-SET SQL_SAFE_UPDATES = 0;
+#============================================================
+# Selects Join
+#============================================================
 
 select Title.TITULOS from Filmes inner join Title on Filmes.ID_TITLE = Title.ID_TITLE;
 select Genre.GENERO from Filmes inner join Genre on Filmes.ID_GENRE = Genre.ID_GENERO;
 select IMDB_Score.AVALIACAO from Filmes inner join IMDB_Score on Filmes.ID_IMDB = IMDB_Score.ID_IMDB;
 select Linguagem.LINGUAGEM from Filmes inner join Linguagem on Filmes.ID_Linguagem = Linguagem.ID_LINGUAGEM;
 
+
+#============================================================
+# Selects
+#============================================================
+
 SELECT Title.TITULOS, Genre.GENERO, IMDB_Score.AVALIACAO, Linguagem.LINGUAGEM FROM Filmes 
 INNER JOIN Title ON Filmes.ID_TITLE = Title.ID_TITLE 
 INNER JOIN Genre ON Filmes.ID_GENRE = Genre.ID_GENERO 
 INNER JOIN IMDB_Score ON Filmes.ID_IMDB = IMDB_Score.ID_IMDB
 INNER JOIN Linguagem on Filmes.ID_Linguagem = Linguagem.ID_LINGUAGEM;
+
+#============================================================
+# Updates
+#============================================================
+
+UPDATE Title set TITULOS = "Haryy Potter" WHERE ID_TITLE = '1';
+UPDATE Genre set GENERO = "Comedy and Horror" WHERE ID_GENERO = '1';
+UPDATE IMDB_Score set AVALIACAO = "10" WHERE ID_IMDB = '1';
+UPDATE Linguagem set LINGUAGEM = "English" WHERE ID_Linguagem = '1';
+UPDATE Title set TITULOS = "MEG3N" WHERE ID_TITLE = '4';
+
+#============================================================
+# Deletes
+#============================================================
+
+DELETE from Filmes where ID_TITLE = 1;
+DELETE from Filmes where ID_TITLE = 3;
+DELETE from Filmes where ID_TITLE = 6;
+DELETE from Filmes where ID_TITLE = 9;
+DELETE from Filmes where ID_TITLE = 12;
+
+
+
+
+
