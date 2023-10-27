@@ -28,14 +28,16 @@ class Organizar_Tabuleiro:
 class MovimentoTabuleiro(Organizar_Tabuleiro):
     def __init__(self):
         super().__init__()
-        self.Movimento()
+        self.Movimento_Percorrer()
       
 
-    def Movimento(self):
+    def Movimento_Percorrer(self):
+        cont = 0
         for i in range(0, 9):
             for j in range(0, 9):
-                if j == 0:
-                    print("c")                    
+                # if i == 0 or j == 0:
+                cont = cont+1
+                print(cont)                    
 
 
 MovimentoTabuleiro()
