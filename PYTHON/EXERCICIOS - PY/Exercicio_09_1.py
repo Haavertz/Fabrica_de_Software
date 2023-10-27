@@ -5,6 +5,7 @@ class All_Pecas():
     # =========-TORRES P-===========
     def torre_P1():
         print("♖",end=" ")
+        
 
 
     def torre_P2():
