@@ -65,7 +65,7 @@ insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, Te
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("41251512422","Juberto","jubertin0@gmail.com",38991827622,"2003-12-01","Masculino","307","1","0");
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("61623123122","Juninho","juninho25@gmail.com",38991827622,"2008-02-11","Masculino","308","1","1");
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("78645894545","Bianca","bian77@gmail.com",38991827622,"2002-02-09","Feminino","306","0","1");
-insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("12312321321","Carvalho","bianca22@gmail.com",38991827622,"2002-02-09","Feminino","305","0","0");
+insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("12312321321","Carvalho","bianca22@gmail.com",38991827622,"2002-02-09","Feminino","305","0","1");
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("12124123421","Odin","odin999@gmail.com",38991827622,"2002-02-09","Masculino","305","0","1");
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("31212451221","Roberta","robertinha00@gmail.com",38991827622,"2006-06-09","Feminino","305","1","1");
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("42161232132","Wesley","Wesley055@gmail.com",38991827622,"2001-10-23","Masculino","306","0","0");
@@ -75,7 +75,7 @@ insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, Te
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("78598657652","Durkard","Durk231@gmail.com",38991827622,"2002-02-09","Feminino","305","0","0");
 insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("15125812371","Jhonnatan","Jhonnatan2211@gmail.com",38991827622,"2002-02-09","Masculino","305","0","0");
 
-insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso) values ("51234123313","Igor","igorFe82@gmail.com",38991827622,"2002-02-09","Masculino","305","0");
+#insert into cliente(Cpf, Nome, Email, Telefone, Nascimento, Genero, Palestra, TermoUso, PermDados) values ("51234123313","Igor","igorFe82@gmail.com",38991827622,"2002-02-09","Masculino","305","0","1");
 
 select * from cliente;
 select * from palestra;
