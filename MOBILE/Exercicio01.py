@@ -5,6 +5,7 @@ from kivy.uix.boxlayout import BoxLayout
 
 class HelloWorld(App):
     def build(self):
+        
         layout = BoxLayout(orientation="vertical")
         tamanho = "40"
         self.label = Label(text="Hello World !!", font_size = tamanho)
