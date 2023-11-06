@@ -11,7 +11,7 @@ class ImagePress(App):
         self.button = Button(text="Exibir", color=(1,1,1,1))
         self.button.bind(on_press = self.toggle_image)
 
-        self.img = Image()   
+        self.img = Image(fit_mode="fill")   
         self.is_image_visible = True
         
         layout.add_widget(self.button)
@@ -21,7 +21,7 @@ class ImagePress(App):
     
     def toggle_image(self, instance):
         if self.is_image_visible == True:
-            self.img.source = "images.jpg"
+            self.img.source = "Midia/images.jpg"
             self.button.text = "Fechar"
             self.is_image_visible = False
         else:

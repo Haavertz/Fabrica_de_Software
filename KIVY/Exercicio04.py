@@ -9,7 +9,7 @@ class Images(App):
         
         self.layout = BoxLayout(orientation="vertical")
 
-        self.image = Image(source = "images.jpg", fit_mode="fill")
+        self.image = Image(source = "Midia/images.jpg", fit_mode="fill")
         
         self.button = Button(text="Fechar")
         self.button.bind(on_press=self.abririmage)
