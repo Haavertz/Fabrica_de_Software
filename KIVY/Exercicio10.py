@@ -1,14 +1,15 @@
-import kivy
 from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.image import Image
+from kivy.uix.screenmanager import ScreenManager
+from Exercicio11 import MenuScreen
+from Exercicio12 import OutraTela
 
-class Adivinhe(App):
-    def Build(self):
-        pass
-    
-if __name__ == "__main__":
-    Adivinhe().run()
+
+class MyApp(App):
+    def build(self):
+        screen_manager = ScreenManager()
+        screen_manager.add_widget(MenuScreen(name='menu'))
+        screen_manager.add_widget(OutraTela(name='outra_tela'))
+        return screen_manager
+
+if __name__ == '__main__':
+    MyApp().run()
