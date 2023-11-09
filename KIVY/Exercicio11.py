@@ -11,13 +11,10 @@ class MenuScreen(Screen):
         
         button = Button(text="Ir para a outra tela")
         button.bind(on_press=self.change_screen)
-        
-        self.imagi = Image(source="Midia/images.jpg", fit_mode="fill")
-        
+                
         button2 = Button(text="Fechar o app")
         button2.bind(on_press=self.change_screen_close)
         
-        layout.add_widget(self.imagi)
         layout.add_widget(button)
         layout.add_widget(button2)
         self.add_widget(layout)
