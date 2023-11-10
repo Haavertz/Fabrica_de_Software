@@ -14,13 +14,16 @@ class MyCadastroMenu(Screen):
 
         self.inp_cadastro = Button(text="Cadastro")
         self.btn_excluir = Button(text="Excluir")
+        self.btn_procurar = Button(text="Procurar")
         self.inp_exit = Button(text="Sair")
 
         self.btn_excluir.bind(on_press=self.ota_tela_excluir)
         self.inp_cadastro.bind(on_press=self.ota_tela)
         self.inp_exit.bind(on_press=self.exit_close)
+        self.btn_procurar.bind(on_press=self.tela_procurar)
         
         self.layout.add_widget(self.inp_cadastro)
+        self.layout.add_widget(self.btn_procurar)
         self.layout.add_widget(self.btn_excluir)
         self.layout.add_widget(self.inp_exit)
 
@@ -31,6 +34,9 @@ class MyCadastroMenu(Screen):
 
     def ota_tela(self, instance):
         self.manager.current = 'outra_tela'
+    
+    def tela_procurar(self, instace):
+        self.manager.current = 'tela_procurar'
     
     
     def exit_close(self, instance):

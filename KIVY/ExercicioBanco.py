@@ -34,7 +34,23 @@ class ExercicioBanco:
 
         self.cursor.execute(delete_query, delete_data)
         self.banco1.commit()
+        
+    def list_values(self):
 
+        consulta_mysql = "select * from cadastro"
+        self.cursor.execute(consulta_mysql)
+        linhas = self.cursor.fetchall()
+
+        for linha in linhas:
+                print("-="*20)
+                print(f"Id = {linha[0]}")
+                print(f"Nome = {linha[1]}")
+                print(f"CPF = {linha[2]}")
+                print(f"SENHA = {linha[3]}")
+                print(f"GMAIL = {linha[4]}")
+                
+        self.banco1.commit()
+        
     def fechar_conexao(self):
         if self.banco1.is_connected():
             self.banco1.close()
