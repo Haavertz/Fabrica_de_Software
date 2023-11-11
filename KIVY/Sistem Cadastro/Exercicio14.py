@@ -6,7 +6,6 @@ from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from ExercicioBanco import ExercicioBanco
 
-
 class MyCadastro(Screen):
     def __init__(self, **kw):
         super(MyCadastro, self).__init__(**kw)
