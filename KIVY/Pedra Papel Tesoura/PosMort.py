@@ -11,10 +11,10 @@ class LifeDead(Screen):
 
         layout = BoxLayout(orientation="vertical")
 
-        self.lbl = Label(text="                                     PERDEU PRA MAQUINA \n KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK", font_size=30, size_hint=(1,0.3))
+        self.lbl = Label(text="                                     PERDEU PÁ MAQUINA \n KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK", font_size=30, size_hint=(1,0.3))
 
         self.img_cat = Image(source="Midia/cat.png", fit_mode="fill")
-        self.button = Button(text="Sair", size_hint=(1,0.3))
+        self.button = Button(text="Exit", size_hint=(1,0.3))
         self.button.bind(on_press = self.Exit)
 
         layout.add_widget(self.lbl)

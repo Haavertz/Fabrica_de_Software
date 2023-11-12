@@ -41,7 +41,7 @@ class GameScreen(Screen):
         self.button = Button(text="Pedra", size_hint=(0.3, 0.3), on_press=self.pedra_point)
         self.button2 = Button(text="Tesoura", size_hint=(0.3, 0.3), on_press=self.tesoura_point)
         self.button3 = Button(text="Papel", size_hint=(0.3, 0.3), on_press=self.papel_point)
-        self.button_sair = Button(text="Sair", size_hint=(1, 1), on_press=self.ButtonPress)
+        self.button_sair = Button(text="Exit", size_hint=(1, 1), on_press=self.ButtonPress)
 
         self.number_random = random.randint(1, 3)
 

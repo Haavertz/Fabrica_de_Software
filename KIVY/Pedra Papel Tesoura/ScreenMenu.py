@@ -13,8 +13,8 @@ class MenuScreen(Screen):
 
         self.lbl = Label(text="Bem Vindo ao Pedra Papel e Tesoura", font_size=40)
 
-        self.button = Button(text="Jogar", font_size=30)
-        self.button2 = Button(text="Sair", font_size=30)
+        self.button = Button(text="Play", font_size=30)
+        self.button2 = Button(text="Exit", font_size=30)
         
         self.button.bind(on_press=self.ButtonPress)
         self.button2.bind(on_press=self.ButtonPressExit)

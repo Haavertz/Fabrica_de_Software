@@ -11,9 +11,9 @@ class VictoryGame(Screen):
 
         layout = BoxLayout(orientation="vertical")
 
-        self.lbl = Label(text="                 Tá experto em malandro", font_size=30, size_hint=(1,0.3))
+        self.lbl = Label(text="              Tá esperto em malandro", font_size=30, size_hint=(1,0.3))
         self.img_cat = Image(source="Midia/cat_victory.jpg", fit_mode="fill")
-        self.button = Button(text="Sair", size_hint=(1,0.3))
+        self.button = Button(text="Exit", size_hint=(1,0.3))
         self.button.bind(on_press = self.Exit)
 
         layout.add_widget(self.lbl)
