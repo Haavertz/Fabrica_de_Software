@@ -11,7 +11,7 @@ class MenuScreen(Screen):
 
         layout = BoxLayout(orientation="vertical")
 
-        self.lbl = Label(text="Bem Vindo ao Pedra Papel e Tesoura", font_size=40)
+        self.lbl = Label(text="Bem Vindo ao Preda Papel e Tesoura", font_size=40)
 
         self.button = Button(text="Play", font_size=30)
         self.button2 = Button(text="Exit", font_size=30)
