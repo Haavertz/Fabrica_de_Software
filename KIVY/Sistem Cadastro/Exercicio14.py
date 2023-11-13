@@ -17,7 +17,7 @@ class MyCadastro(Screen):
         self.inp_nome = TextInput()
 
         self.lbl_cpf = Label(text="Digite seu CPF", font_size = 25)
-        self.inp_cpf = TextInput()
+        self.inp_cpf = TextInput(input_filter='int')
 
         self.lbl_senha = Label(text="Digite sua Senha", font_size = 25)
         self.inp_senha = TextInput(password=True)

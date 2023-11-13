@@ -15,7 +15,7 @@ class MyExcluirCadastro(Screen):
         self.grid = GridLayout(cols = 1, size_hint = (1, 1))
 
         self.lbl_id = Label(text="ID:")
-        self.id = TextInput()
+        self.id = TextInput(input_filter= 'int')
 
         self.btn_confirm = Button(text="Confirmar Exclusão", font_size=20, on_press=self.procurar)
         self.btn_sair = Button(text="Sair", font_size=20, on_press=self.sair)
