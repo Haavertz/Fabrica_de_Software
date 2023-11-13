@@ -5,6 +5,8 @@ from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.image import Image
 from kivy.clock import Clock
+from kivy.core.audio import SoundLoader
+
 
 import time
 import random
@@ -69,6 +71,7 @@ class GameScreen(Screen):
 
         self.numberLife = 0
         self.numbervictory = 0
+
 
     def ButtonPress(self, instace):
         self.manager.current = 'menu'
@@ -146,6 +149,10 @@ class GameScreen(Screen):
             self.numberLife = 0
             time.sleep(0.3)
             self.manager.current = 'pos_derrota'
+            self.audio = SoundLoader.load("Midia/smurf-cat.mp3")
+            self.audio.play()
+
+
             
     def Victory(self, num):
         try: 
