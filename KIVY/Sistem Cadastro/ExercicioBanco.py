@@ -20,13 +20,15 @@ class ExercicioBanco:
         self.banco1.commit()
         print(self.cursor.rowcount, "registro(s) inserido(s).")
 
-    def select_values(self):
-        select = "select * from cadastro;"
+    def select_values(self, user_id):
+        select = f"select * from cadastro where id_cadastro = {user_id};"
         self.cursor.execute(select)
-        
+
         resultados = self.cursor.fetchall()
-        for resultado in resultados:
-            print(resultado)
+        
+        for self.resultado in resultados:
+            pass
+
             
     def exclude_values(self, id):
         delete_query = "delete from cadastro where id_cadastro = %s;"

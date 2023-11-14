@@ -1,9 +1,9 @@
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager
-from Exercicio14 import MyCadastro
-from Exercicio15 import MyCadastroMenu
-from Exercicio16 import MyExcluirCadastro 
-from Exercicio17 import MyProcurar
+from MyCadastro import MyCadastro
+from MyCadastroMenu import MyCadastroMenu
+from MyExcluirCadastro import MyExcluirCadastro 
+from MyProcurar import MyProcurar
 
 class RunAplicationCadastro(App):
     def build(self):

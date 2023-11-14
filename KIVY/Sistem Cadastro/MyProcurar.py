@@ -24,7 +24,7 @@ class MyProcurar(Screen):
         self.inp_cpf = TextInput(input_filter = 'int')
 
         self.lbl_senha = Label(text="Senha", font_size = 25)
-        self.inp_senha = TextInput(password=True)
+        self.inp_senha = TextInput()
 
         self.lbl_gmail = Label(text="GMAIL", font_size = 25)
         self.inp_gmail = TextInput()
@@ -53,6 +53,16 @@ class MyProcurar(Screen):
         self.manager.current = 'menu'
         
     def procurar(self, instace):
-        bd = ExercicioBanco()
-        bd.list_values()
+        id_user = self.inp_id.text
         
+        bd = ExercicioBanco()
+        bd.select_values(id_user)
+        
+        try:
+                                
+            self.inp_nome.text = bd.resultado[1]
+            self.inp_cpf.text = bd.resultado[2]
+            self.inp_senha.text = bd.resultado[3]
+            self.inp_gmail.text = bd.resultado[4]
+        except:
+            print("Não tem nada neste ID")
