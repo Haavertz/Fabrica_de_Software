@@ -1,4 +1,4 @@
-# ligor-dark README
+# sprectral README
 
 ## Working with Markdown
 

@@ -1,6 +1,6 @@
 {
-  "name": "linodark",
-  "displayName": "LinoDark",
+  "name": "sprectral",
+  "displayName": "SprecTral",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -12,9 +12,9 @@
   "contributes": {
     "themes": [
       {
-        "label": "LinoDark",
+        "label": "Spec",
         "uiTheme": "vs-dark",
-        "path": "./themes/LinoDark-color-theme.json"
+        "path": "./themes/Spec-color-theme.json"
       }
     ]
   }
