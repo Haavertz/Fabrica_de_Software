@@ -27,7 +27,6 @@ class BancoDS():
         try:
             self.cursor.close()
             self.banco.close()
-            print("Banco Fechado")
         except Exception as e:
             print(f"Erro ao fechar o banco: {e}")
 
