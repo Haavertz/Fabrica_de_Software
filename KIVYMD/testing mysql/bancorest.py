@@ -1,36 +1,30 @@
-import mysql.connector
+import requests
+import json
 
-class BancoDS():
-    def __init__(self) -> None:
-        try:
-            self.banco = mysql.connector.connect(
-                user='gleison', password='12345',
-                host='10.28.1.129', database="tentativa_banco"
-            )
-            self.cursor = self.banco.cursor()
-        except mysql.connector.Error as err:
-            print(f"Erro de conexão: {err}")
+url = 'https://modelos2-8ae7c-default-rtdb.firebaseio.com/'
 
-    def list_values(self):
-        try:
-            valueText = "select * from cadastro;"
-            self.cursor.execute(valueText)
-            lista = self.cursor.fetchall()
-            for self.result in lista:
-                pass
-        except mysql.connector.Error as err:
-            print(f"Erro ao executar a consulta: {err}")
-        finally:
-            self.fechar_bd()
+# dados = {
+#     'FrutID': 'Banana5'
+# }
 
-    def fechar_bd(self):
-        try:
-            self.cursor.close()
-            self.banco.close()
-        except Exception as e:
-            print(f"Erro ao fechar o banco: {e}")
+# requisicao = requests.get(f"{url}Produtos/Frutas/.json", data=json.dumps(dados))
 
-# Exemplo de uso
-if __name__ == "__main__":
-    banco = BancoDS()
-    banco.list_values()
+# print(requisicao)
+# print(requisicao.text)
+
+id_personalizado = 'Frutas'
+
+dados = {
+    'Frutas': 'Banana'
+}
+
+requisicao = requests.get(f'{url}/Produtos/.json')
+
+requisicao2 = requests.put(f'{url}/Produtos/{id_personalizado}.json', data=json.dumps(dados))
+
+
+dic_requisicao = requisicao.json()
+# dic_requisicao2 = requsicao2.json()
+
+# for id_venda in dic_requisicao:
+#     print(id_venda)
