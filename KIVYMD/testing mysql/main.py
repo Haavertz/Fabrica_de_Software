@@ -4,52 +4,51 @@ from kivymd.uix.textfield import MDTextField
 from kivymd.uix.button import MDRaisedButton
 
 import requests
-import json
 
 class FruitApp(MDApp):
     def build(self):
         layout = MDBoxLayout(orientation='vertical')
 
-        self.inp_fruit = MDTextField(
-            hint_text='Fruit',
-            helper_text='Enter the fruit name',
+
+
+        self.usuario = MDTextField(
+            hint_text='User',
+            helper_text='Enter the user name',
             helper_text_mode='on_focus'
         )
-        self.inp_value = MDTextField(
-            hint_text='Value',
-            helper_text='Enter the value of the fruit',
+        self.password = MDTextField(
+            hint_text='Password',
+            helper_text='Enter the password',
             helper_text_mode='on_focus',
-            input_filter='float'
         )
 
         add_button = MDRaisedButton(
-            text='Add Fruit',
+            text='Login',
             on_release=self.add_fruit
         )
 
-        layout.add_widget(self.inp_fruit)
-        layout.add_widget(self.inp_value)
+        layout.add_widget(self.usuario)
+        layout.add_widget(self.password)
         layout.add_widget(add_button)
 
         return layout
 
     def add_fruit(self, instance):
-        fruit_input = self.inp_fruit.text
-        value_input = self.inp_value.text
+        user = self.usuario.text
+        password = int(self.password.text)
 
-        url = 'https://modelos2-8ae7c-default-rtdb.firebaseio.com/'
+        url = 'https://projetomodelos-6cdf6-default-rtdb.firebaseio.com/'
+        requisicao = requests.get(f'{url}/adm/{user}/.json')
 
-
-        id_personalizado = 'Fruta'
-
-        dados = {
-            'Frutas':fruit_input,
-            'Valores':value_input
-        }
-
-        requisicao = requests.post(f'{url}/Produtos/{id_personalizado}.json', data=json.dumps(dados))
-
-
+        dic_requisicao = requisicao.json()
+        
+        try:
+            if password == int(dic_requisicao['senha']):
+                print("Estrou caralhoooooooooo!")
+            else:
+                print("Errou")  
+        except:
+            print("Errou Try")
 
 
 if __name__ == '__main__':
