@@ -1,77 +1,94 @@
 <!DOCTYPE html>
-<html lang="br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/FavIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Meu Site Colorido</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="shortcut icon" href="images/nasa-logo.png" type="image/x-icon">
+    <title>NASA</title>
 </head>
 <body>
-    <header>
-        <h1>Bem-Vindo ao Meu Site Colorido</h1>
-    </header>
-    <main>
-        <div class="container-conteudo">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi similique ratione enim autem omnis, saepe nemo sapiente facere dolorem molestiae magnam labore quasi, vel vero debitis iste fuga ipsum.</p>
-            <div class="lists">
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-                <ol>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ol>
+    <footer>
+        <div class="content-icons">
+            <div class="explorer">
+                <label for="fexplore">Explore</label>
+                <img src="images/icon-topbar.png" alt="setinha" onmouseover="showHoverMenu()" onmouseout="hideHoverMenu()">
+                <div id="Search_placehoder">
+                    <input type="text" placeholder="Search...">
+                </div>
             </div>
-            <img src="images/imagem1.jpeg" alt="Image1 not loading">
-            
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi similique ratione enim autem omnis, saepe nemo sapiente facere dolorem molestiae magnam labore quasi, vel vero debitis iste fuga ipsum.</p>
-            <img src="images/imagem2.jpeg" alt="Image1 not loading">
-            
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi similique ratione enim autem omnis, saepe nemo sapiente facere dolorem molestiae magnam labore quasi, vel vero debitis iste fuga ipsum.</p>
-            <img src="images/imagem3.jpeg" alt="Image1 not loading">
-            
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi similique ratione enim autem omnis, saepe nemo sapiente facere dolorem molestiae magnam labore quasi, vel vero debitis iste fuga ipsum.</p>
-            <img src="images/imagem4.jpeg" alt="Image1 not loading">
-            
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eligendi similique ratione enim autem omnis, saepe nemo sapiente facere dolorem molestiae magnam labore quasi, vel vero debitis iste fuga ipsum.</p>
-            <img src="images/imagem5.jpeg" alt="Image1 not loading">
+            <div class="imgcenter">
+                <a href="index.html">
+                    <img src="images/nasa-logo.png" alt="Image Logo" id="nasa_logo">
+                </a>
+            </div>
+            <div id="Menu-Bar">
+                <label> Noticias e Eventos </label>
+                <label> Multimidia </label>
+                <label> Nasa</label>
+            </div>
         </div>
+    </footer>
+    <main>
+        <div class="container">
+            <div class="hovermenubar">
+                <label> HOME </label>
+                <label> Missions </label>
+                <label> Humans in Space </label>
+                <label> Earth & Climate </label>
+            </div>
+            <h2>AO VIVO AGORA</h2>
+            <hr>
+            <div class="container-bottom">
+                <div class="img-main-container">
+                    <img src="images/robo.png" alt="ImageRobo">
+                </div>
+                <div class="grid-cols">
+                    <h1>Festa de observação da construção de robôs</h1>
+                    <p>Estamos construindo nosso primeiro rover lunar robótico! Junte-se a nós para conversar com especialistas da missão VIPER e ver os bastidores do processo de construção.</p>
+                </div>
+                <div class="img-main-container">
+                    <a href="https://www.youtube.com/watch?v=OffTxAiAQfM" target="_blank">
+                        <img src="images/left set.png" alt="seta" id="seta_left">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container_rodapes">
+            <div class="texto_rodapes">
+                <h1> Centro de informações da Terra </h1>
+                <h4>Descubra a Terra como a NASA a vê. Saiba por que essas informações são importantes para todos nós.</h4>
+                <div class="explorar_rotacion">    
+                    <h3> Explore </h3>
+                    <a href="https://gis.earthdata.nasa.gov/portal/apps/sites/#/earth-information-center/pages/earth-now" target="_blank">
+                        <img src="images/left set.png" alt="ceta"> 
+                    </a>
+                </div>
+            </div>
+         </div> 
     </main>
     <footer>
-        <h1>Formulário</h1>
-        <form>
-            <label for="fname">Nome: |</label>
-            <input type="text" required> <br>
-            <label for="femail">Email: |</label>
-            <input type="email" required> <br>
-            <label for="fsenha">Senha: |</label>
-            <input type="password" required> <br>
-            <label for="fidade">Idade: |</label>
-            <input type="number" required> <br>
-            <label for="fgenero">Genêro: </label>
-            <select name="selects" id="selects">
-                <option value="Masculino">Masculino</option>
-                <option value="Feminino">Feminino</option>
-                <option value="Transformes">Transformes</option>
-            </select>
-            <p>Interesses:</p>
-            <input type="checkbox" id="checkbox1" value="Esporte" title="Esporte"> 
-            <label for="checkbox" id="checkbox1">Esporte</label> <br>
-            <input type="checkbox" id="checkbox2" value="Música" title="Música"> 
-            <label for="checkbox" id="checkbox2">Musica</label> <br>
-            <input type="checkbox" id="checkbox3" value="Tecnologia" title="Tecnologia">
-            <label for="checkbox" id="checkbox3">Tecnologia</label> <br>
-            <p>Mensagem:</p>
-            <textarea name="farea" cols="20" rows="5"></textarea> <br>
-            <button>Enviar</button>
-        </form>
+
     </footer>
-    <div id="footerfinal">
-        <p>&copy; 2023 Meu Site Colorido. Todos os direitos reservados.</p>
-    </div>
+
+    <script>
+        function showHoverMenu() {
+            var hoverMenu = document.querySelector('.hovermenubar');
+            hoverMenu.style.display = 'block';
+
+        }
+
+        function hideHoverMenu() {
+            var hoverMenu = document.querySelector('.hovermenubar');
+
+            hoverMenu.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+
