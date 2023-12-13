@@ -137,7 +137,7 @@ footer {
 
 .texto_rodapes h1{
     color: white;
-    margin-top: 6rem;
+    margin-top: 10rem;
     font-size: 80px;
     font-family: sans-serif;
     width: 40%;
@@ -355,7 +355,7 @@ footer {
 .text_espace {
     font-family: "Public Sans Web", sans-serif;
     color: white;
-    margin: 0px 98px;
+    margin: 0px 128px;
     padding: 48px 32px;
 }
 
