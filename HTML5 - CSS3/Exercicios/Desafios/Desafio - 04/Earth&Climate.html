@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/nasa-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <title>NASA</title>
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
         <div class="content-icons">
             <div class="explorer">
-                <label>Explore</label>
+                <label for="fexplore">Explore</label>
                 <img src="images/icon-topbar.png" alt="setinha">
                 <div id="Search_placehoder">
                     <input type="text" placeholder="Search...">
@@ -24,113 +24,34 @@
                 </a>
             </div>
             <div id="Menu-Bar">
-                <label> News & Events </label>
+                <label> Noticias e Eventos </label>
                 <label> Multimidia </label>
-                <label> NASA+ </label>
+                <label> Nasa</label>
+
             </div>
         </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <h2>LIVE NOW</h2>
-            <hr>
-            <div class="container-bottom">
-                <div class="img-main-container">
-                    <img src="images/robo.png" alt="ImageRobo">
-                </div>
-                <div class="grid-cols">
-                    <h1>Robot Building Watch Party</h1>
-                    <p>We're building our first robotic lunar rover! Join us to talk to experts from the VIPER mission and see behind the scenes of the construction process.</p>
-                </div>
-                <div class="img-main-container">
-                    <a href="https://www.youtube.com/watch?v=OffTxAiAQfM" target="_blank">
-                        <img src="images/left set.png" alt="seta" id="seta_left">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container_rodapes">
-            <div class="texto_rodapes">
-                <h1> Earth Information Center </h1>
-                <h4> Discover Earth as NASA sees it. Learn why this information matters to us all. </h4>
-                <div class="explorar_rotacion">    
-                    <h3> Explore </h3>
-                    <a href="https://gis.earthdata.nasa.gov/portal/apps/sites/#/earth-information-center/pages/earth-now" target="_blank">
-                        <img src="images/left set.png" alt="ceta"> 
-                    </a>
-                </div>
-
-            </div>
-         </div>
-         <div class="all_container_noticias">
-             <div class="contanier_noticias"> 
-                <div class="contanier_titulos">
-                    <div id="titulo1">
-                        <p> Featured News </p>
-                    </div>
-                </div>
-                <div id="contenier_news">
-                    <a href=" https://www.nasa.gov/news/all-news/"  target="_blank"> 
-                        <p>More NASA News </p>
-                        <img src="images/left set.png" alt="imgseta">
-                    </a>
-                </div>
-             </div>
-
-             <div class="images_not " >
-                <div id="images_pricipal">
-                    <a target="_blank" href="https://www.nasa.gov/image-article/artemis-ii-booster-surges-ahead-at-nasas-kennedy-space-center/">
-                        <img src="images/nt_1.png" alt="img1" >    
-                    </a>
-                    <a target="_blank"   href="https://www.nasa.gov/image-article/nasa-signs-memorandum-of-agreement-for-space-weather/">    
-                        <img src="images/nt_2.png" alt="img2">
-                    </a>
-    
-                </div>
-                <div id="images_segunda" >
-                    <a target="_blank"  href="https://nasa.gov/centers-and-facilities/goddard/nasa-laser-reflecting-instruments-to-help-pinpoint-earth-measurements/">
-                        <img src="images/nt_3.png" alt="img3">
-    
-                    </a>
-                        <a target="_blank" href="https://www.nasa.gov/missions/airborne-science/nasa-helps-study-one-of-the-worlds-most-diverse-ecosystems/">     
-                            <img src="images/nt_4.png" alt="img4">
-                        </a>
-
-                </div>
-             </div>
-
-            </div>
-            
-            
-            <div class="conteiner_espaco">
-                <div class="text_espace">
-                    <h1> Explore the Universe from your Inbox </h1>
-
-                    <p>Stay up-to-date on the latest news from NASA–from Earth to the Moon, the Solar System and beyond. <br> We’ll never share your email address.</p>
-                    <div id="sign_up_space">
-                        <span>Sign Up</span>
-                        <img src="images/left set.png" alt="imagesetinha">
-                    </div>
-                </div>
-            </div>
-            <div class="conteiner_sobre">
-               <div class="conteiner_sob_texto">
-                   <p> About Us: </p>
-                   <br>
-                   <hr>
-                   <br>
-                   <h3> Hello, An image sometimes represents a lot of things! Here we have people who are happy to be with us every day, sometimes not everything seems wonderful, but we try to do everything we can to make them the best Astronaut! The life of an astronaut is a fascinating journey, full of challenges and discoveries that transcend the limits of the Earth's atmosphere. From rigorous physical and mental training to unique experiences in space, every moment in an astronaut's life is an opportunity to push boundaries. Aspiring astronauts go through years of intensive preparation, facing zero-gravity simulations, learning to operate complex space technologies and honing their problem-solving skills. The dedication required is unparalleled, but the reward is the chance to explore the unknown. In space, an astronaut's life is characterized by graceful floating, an impressive view of Earth from above, and the constant challenge of maintaining physical and mental health in harsh environments. The solitude of the cosmos contrasts with deep human connection, as astronauts collaborate on scientific missions crucial to understanding the mysteries of the universe.
-                   </h3>
-               </div>
-
-               <div class="conteiner_sob_img">
-                   <img src="images/gente_grande.jpg" alt="imagem_team">
-               </div>
-           </div>
+        <div class="header_back">
+            <a href="#">Earth and Climate</a>
+            <a target="_blank" href="https://science.nasa.gov/earth/explore/">Explore</a>
+            <a target="_blank" href="https://science.nasa.gov/climate-change/">Climate Change</a>
+            <a target="_blank" href="https://science.nasa.gov/earth/in-action">Science in Action</a>
+            <a target="_blank" href="https://science.nasa.gov/earth/multimedia">Multimedia</a>
+            <a target="_blank" href="https://science.nasa.gov/earth/data">Data</a>
+            <a target="_blank" href="https://science.nasa.gov/earth-science">For Researchers</a>
         </div>
         
+        
+    </header>
+    
+    <main>
+        <div class="all_image_earth">
+            <div class="image_earth">
+                <div class="image_earth_text">
+                    <h1>Earth</h1>
+                    <p>Your home. Our Mission. <br> And the one planet that NASA studies more than any other.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -278,5 +199,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>

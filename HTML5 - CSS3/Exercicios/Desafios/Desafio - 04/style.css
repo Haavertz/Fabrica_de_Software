@@ -5,6 +5,12 @@
     margin: 0;
 }
 
+header {
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+}
+
 footer {
     width: 100%;
     background-color: black;
@@ -396,18 +402,17 @@ footer {
 
 .container_footer {
     padding: 56px 24px;
-
 }
 
-.logo_footer {
-    margin: 0px 227.5px;
-}
+
 .logo_footer img {
-    width: 64px;
-    height: 53.52px;
+    width: 52px;
+    height: 43.48px;
+    line-height: 32.292px;
 }
 
 .container_footer_grid {
+    display: flex;
     color: white;
 }
 
@@ -421,40 +426,173 @@ footer {
     font-weight: bolder;
     display: inline-flex;
     align-content: center;
-    font-size: 2rem;
-}
+    font-size: 0.8rem;
     
+}
+
 #footer_id_join img {
-    border-radius: 50%;
+    border-radius: 100%;
     width: 20px;
     height: 20px;
 }
+#footer_id_join p {
 
-.contanier-img-news img{
-    width: 100%;
+    font-weight: bold;
+    padding: 3px 8px 0px 0px;
+}
+
+.footer_id_join_spans {
+    display: block;
+    columns: 3;
+    padding: 0 35px;
+}
+
+.footer_id_join_spans a{
+    font-family: "Inter", sans-serif;
+    font-size: 11.7px;
+    color: white;
+    text-decoration: none;
+}
+.footer_id_join_spans li{
+    width: 184.656px;
+    padding: 8px 0;
 
 }
 
-.img-news img{
-
-    height: 7%;
-    object-fit: cover;
+#lis_spans:hover {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    
 }
 
-.contanier-img-news div{
-    width: 100%;
-    height: 600rem;
-    background-image: cover;
-}
+.footer_redes p{
 
-.img-news h1 {
-    font: 40px;
-    position: absolute;
-    padding: 18rem;
-    font-weight: 700;
-    line-height: 1.05rem;
-    font-family: "inter", sans-serif;
-    font-size: 4.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 14.4px;
     color: white;
 
+}
+.footer_redes ul li a p{
+    padding: 10px;
+}
+
+
+.icons_footer a i {
+    color: white;
+    width: 26px;
+    height: 26px;
+    background-color: #2e2e32;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons_footer a i:hover {
+    background-color: #5d5d61;
+}
+
+.icons_footer a {
+    padding: 0px 5px 0px 0px;
+}
+
+#center_footer_icons {
+    padding: 0px 10px 10px;
+}
+
+.more_footer_nasa ul li a{
+    color: white;
+    text-decoration: none;
+    
+}
+.more_footer_nasa ul li a:hover{
+    text-decoration: underline;
+    text-decoration-style: dashed;
+
+}
+
+#footer_id_join_div div span{
+    padding-top: 10px;
+}
+
+.hds_footer {
+    padding-right: 32.500px;
+}
+
+.hds_footer p {   
+    text-size-adjust: 100%;
+    color: #b9b9bb;
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 11.375px;
+    margin: 0 0 11.375px;
+}
+
+.hds_footer h3 {
+    font-family: "inter", sans-serif;
+    margin: 17.875px 0px;
+}
+
+.hds_footer span {
+    padding: 6.500px 0;
+    font-family: "inter", sans-serif;
+    font-size: 11.7px;
+    font-weight: 400;
+    
+}
+.container_footer_grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#joingus {
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+i {
+    color: white;
+}
+
+.header_back {
+    display: inline-flex;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+}
+
+.header_back a {
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+}
+
+
+.image_earth {
+    background-image: url(images/image_earth.jpg);
+    background-size: cover;
+    background-image: rgba(0, 0, 0, 0.5); 
+    height: 200px; 
+}
+
+.image_earth_text {
+    padding: 10rem;
+}
+
+.image_earth_text h1{
+    font-family: "Inter", sans-serif;
+    font-size: 65px;
+    color: white;
+
+}
+
+.image_earth_text p {
+    font-family: "Public Sans Web", sans-serif;
+    font-size: 14.3px;
+    color: white;
 }
