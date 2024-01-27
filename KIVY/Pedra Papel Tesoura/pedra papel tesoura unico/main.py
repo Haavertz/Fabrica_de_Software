@@ -6,7 +6,7 @@ import random
 
 class GamePreda(App):
     def build(self):
-        self.life = Label(text="❤️ ❤️ ❤️", font_name="seguiemj", font_size=20, size_hint=(1, 0.5))
+        self.life = Label(text="@ @ @", font_size=20, size_hint=(1, 0.5))
         self.victory = Label(text='Vitórias: ', font_size=20)
 
         self.result_label = Label(text="Escolha: Pedra, Papel ou Tesoura", font_size='20sp')
@@ -24,11 +24,7 @@ class GamePreda(App):
         for choice in choices:
             buttons_layout.add_widget(Button(text=choice, on_press=self.make_choice))
 
-        reset_button = Button(text='Resetar Jogo', on_press=self.reset_game)
-        main_layout.add_widget(reset_button)
-
-        self.number_victory = 0
-        self.number_death = 0
+        self.reset_game()
 
         return main_layout
 
@@ -50,29 +46,27 @@ class GamePreda(App):
             (user_choice == 'Tesoura' and computer_choice == 'Papel')
         ):
             self.number_victory += 1
-            self.victory.text = " * " * self.number_victory
+            self.victory.text = " $ " * self.number_victory
             if self.number_victory == 3:
                 self.life.text = "Você ganhou! Parabéns!"
                 self.victory.text = ' '
-                self.number_victory = 0
-
-            return "Você venceu!"
+                self.reset_game()
+            self.life.text = "Você venceu!"
         else:
             self.number_death += 1
-            self.life.text = '❤️ ' * (3 - self.number_death)
+            self.life.text = '@ ' * (3 - self.number_death)
             if self.number_death == 3:
-                self.life.text = "❤️ ❤️ ❤️"
+                self.life.text = "@ @ @"
                 self.number_death = 0
                 self.number_victory = 0
                 self.victory.text = ' '
-                self.result_label.text = 'Você perdeu a partida estamos resetando suas vidas e suas vitorias!'
-
+                self.reset_game()
             return 'Você perdeu uma vida!'
 
-    def reset_game(self, instance):
+    def reset_game(self, instance=None):
         self.number_victory = 0
         self.number_death = 0
-        self.life.text = "❤️ ❤️ ❤️"
+        self.life.text = "@ @ @"
         self.victory.text = ' '
         self.result_label.text = "Escolha: Pedra, Papel ou Tesoura"
 
