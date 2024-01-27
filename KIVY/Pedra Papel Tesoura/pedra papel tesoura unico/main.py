@@ -6,28 +6,33 @@ import random
 
 class GamePreda(App):
     def build(self):
-        self.life = Label(text="❤️ ❤️ ❤️",font_name = "seguiemj", font_size=20, size_hint=(1, 0.5))
-        self.victory = Label(text='Vitorias: ', font_size=20)
-        
-        self.result_label = Label(text="Escolha: Pedra, Papel ou Tesoura")
-        self.result_label.font_size = '20sp'
+        self.life = Label(text="❤️ ❤️ ❤️", font_name="seguiemj", font_size=20, size_hint=(1, 0.5))
+        self.victory = Label(text='Vitórias: ', font_size=20)
 
-        buttons_layout = BoxLayout(orientation='horizontal', spacing=10, size=(100,100))
+        self.result_label = Label(text="Escolha: Pedra, Papel ou Tesoura", font_size='20sp')
+
+        buttons_layout = BoxLayout(orientation='horizontal', spacing=10)
 
         main_layout = BoxLayout(orientation='vertical', spacing=10)
 
         main_layout.add_widget(self.life)
+        main_layout.add_widget(self.victory)
         main_layout.add_widget(self.result_label)
         main_layout.add_widget(buttons_layout)
-        buttons_layout.add_widget(Button(text='Pedra', on_press=self.make_choice))
-        buttons_layout.add_widget(Button(text='Papel', on_press=self.make_choice))
-        buttons_layout.add_widget(Button(text='Tesoura', on_press=self.make_choice))
+
+        choices = ['Pedra', 'Papel', 'Tesoura']
+        for choice in choices:
+            buttons_layout.add_widget(Button(text=choice, on_press=self.make_choice))
+
+        reset_button = Button(text='Resetar Jogo', on_press=self.reset_game)
+        main_layout.add_widget(reset_button)
+
+        self.number_victory = 0
+        self.number_death = 0
 
         return main_layout
 
     def make_choice(self, instance):
-        self.number_death = 0
-        self.number_victory = 0
         user_choice = instance.text
         choices = ['Pedra', 'Papel', 'Tesoura']
         computer_choice = random.choice(choices)
@@ -38,25 +43,38 @@ class GamePreda(App):
     def determine_winner(self, user_choice, computer_choice):
         if user_choice == computer_choice:
             return "Empate!"
+        
         elif (
             (user_choice == 'Pedra' and computer_choice == 'Tesoura') or
             (user_choice == 'Papel' and computer_choice == 'Pedra') or
             (user_choice == 'Tesoura' and computer_choice == 'Papel')
         ):
-            if self.number_victory == 0:
-                self.life.text += " * "
-                self.number_victory += 1
-            elif self.number_victory == 1:
-                self.life.text
+            self.number_victory += 1
+            self.victory.text = " * " * self.number_victory
+            if self.number_victory == 3:
+                self.life.text = "Você ganhou! Parabéns!"
+                self.victory.text = ' '
+                self.number_victory = 0
+
+            return "Você venceu!"
         else:
-            if self.number_death == 0:
-                self.life.text = '❤️ ❤️'
-                self.number_death += 1
-            elif self.number_death == 1:
-                self.life.text = '❤️'
-                self.number_death += 1
-            else:
-                self.life.text= 'MORREU!'
+            self.number_death += 1
+            self.life.text = '❤️ ' * (3 - self.number_death)
+            if self.number_death == 3:
+                self.life.text = "❤️ ❤️ ❤️"
+                self.number_death = 0
+                self.number_victory = 0
+                self.victory.text = ' '
+                self.result_label.text = 'Você perdeu a partida estamos resetando suas vidas e suas vitorias!'
+
+            return 'Você perdeu uma vida!'
+
+    def reset_game(self, instance):
+        self.number_victory = 0
+        self.number_death = 0
+        self.life.text = "❤️ ❤️ ❤️"
+        self.victory.text = ' '
+        self.result_label.text = "Escolha: Pedra, Papel ou Tesoura"
 
 if __name__ == '__main__':
     GamePreda().run()
