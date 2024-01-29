@@ -244,7 +244,6 @@ class VictoryGame(Screen):
         layout.add_widget(self.img_cat)
         layout.add_widget(self.button2)
         layout.add_widget(self.button)
-
         self.add_widget(layout)
 
     def Exit(self, instance):
