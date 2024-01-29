@@ -14,15 +14,17 @@ class MenuScreen(Screen):
 
         layout = BoxLayout(orientation="vertical")
 
-        self.lbl = Label(text="Bem Vindo ao Preda Papel e Tesoura", font_size=40)
+        self.lbl = Label(text="Bem Vindo ao Pedra Papel e Tesoura", font_size=40)
+        self.descript = Label(text="Suas vidas serao = @@@ \n Suas vitorias serao = ***", font_size=40)
 
-        self.button = Button(text="Play", font_size=30)
-        self.button2 = Button(text="Exit", font_size=30)
+        self.button = Button(text="Jogar", font_size=30)
+        self.button2 = Button(text="Sair", font_size=30)
 
         self.button.bind(on_press=self.ButtonPress)
         self.button2.bind(on_press=self.ButtonPressExit)
 
         layout.add_widget(self.lbl)
+        layout.add_widget(self.descript)
         layout.add_widget(self.button)
         layout.add_widget(self.button2)
 
@@ -33,6 +35,7 @@ class MenuScreen(Screen):
 
     def ButtonPressExit(self, instance):
         App.get_running_app().stop()
+
 
 class GameScreen(Screen):
     def __init__(self, **kw):
@@ -69,10 +72,15 @@ class GameScreen(Screen):
 
         self.number_random = random.randint(1, 3)
 
+        label_voce = Label(text="VOCÊ", size_hint=(1, 0.1), halign="center", font_size=18)
+        label_maquina = Label(text="MAQUINA", size_hint=(1, 0.1), halign="center", font_size=18)
+
+        layout_2.add_widget(label_maquina)
         layout_2.add_widget(self.image_pedra)
         layout_2.add_widget(self.image_tesoura)
         layout_2.add_widget(self.image_papel)
 
+        self.layout3.add_widget(label_voce)
         self.layout3.add_widget(self.image_pedra2)
         self.layout3.add_widget(self.image_tesoura2)
         self.layout3.add_widget(self.image_papel2)
@@ -128,8 +136,8 @@ class GameScreen(Screen):
             self.numberLife += 1
             self.Life(self.numberLife)
 
-        Clock.schedule_once(lambda dt: self.voltarEstadoJogador(value), 0.7)
-        Clock.schedule_once(lambda dt: self.voltarEstadoMaquina(value_random), 0.7)
+        Clock.schedule_once(lambda dt: self.voltarEstadoJogador(value), 1.8)
+        Clock.schedule_once(lambda dt: self.voltarEstadoMaquina(value_random), 1.8)
 
         self.number_random = random.randint(1, 3)
 
@@ -171,7 +179,7 @@ class GameScreen(Screen):
         if int(num) == 3:
             self.manager.current = 'pos_victory'
         if int(num):
-            self.victoria.text = self.victoria.text + "@"
+            self.victoria.text = self.victoria.text + "*"
         else:
             self.numbervictory = ""
 
@@ -179,9 +187,11 @@ class GameScreen(Screen):
         if self.number_random == 1:
             self.image_papel.source = ""
             self.image_tesoura.source = ""
+            
         elif self.number_random == 2:
             self.image_papel.source = ""
             self.image_pedra.source = ""
+            
         else:
             self.image_tesoura.source = ""
             self.image_pedra.source = ""
@@ -192,12 +202,14 @@ class LifeDead(Screen):
 
         layout = BoxLayout(orientation="vertical")
 
-        self.lbl = Label(text="Game Over")
+        self.lbl = Label(text="Você perdeu!", font_size=30, size_hint=(1, 0.3))
+        self.lbl2 = Label(text="KKKKKKKKKKKKKKKKKKKKKKKKK", font_size=15, size_hint=(1, 0.3))
         self.img_cat = Image(source="cat.png", fit_mode="fill")
-        self.button3 = Button(text="Restart", on_press=self.Restart)
-        self.button = Button(text="Exit", on_press=self.Exit)
+        self.button3 = Button(text="Resetar o jogo", on_press=self.Restart)
+        self.button = Button(text="Sair", on_press=self.Exit)
 
         layout.add_widget(self.lbl)
+        layout.add_widget(self.lbl2)
         layout.add_widget(self.img_cat)
         layout.add_widget(self.button3)
         layout.add_widget(self.button)
@@ -218,15 +230,17 @@ class VictoryGame(Screen):
 
         layout = BoxLayout(orientation="vertical")
 
-        self.lbl = Label(text="Tá esperto ei malandro", font_size=30, size_hint=(1, 0.3))
+        self.lbl = Label(text="Você ganhou", font_size=30, size_hint=(1, 0.3))
+        self.lbl2 = Label(text="Tá esperto ein malandro", font_size=15, size_hint=(1, 0.3))
         self.img_cat = Image(source="cat_victory.jpg", fit_mode="fill")
-        self.button = Button(text="Exit", size_hint=(1, 0.2))
-        self.button2 = Button(text="Restart to Game", size_hint=(1, 0.2))
+        self.button = Button(text="Sair", size_hint=(1, 0.2))
+        self.button2 = Button(text="Resetar o jogo", size_hint=(1, 0.2))
 
         self.button2.bind(on_press=self.Restart)
         self.button.bind(on_press=self.Exit)
 
         layout.add_widget(self.lbl)
+        layout.add_widget(self.lbl2)
         layout.add_widget(self.img_cat)
         layout.add_widget(self.button2)
         layout.add_widget(self.button)
