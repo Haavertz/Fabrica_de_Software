@@ -8,7 +8,7 @@ class AlexKiddGame(FloatLayout):
         super(AlexKiddGame, self).__init__(**kwargs)
         
         self.alex_kidd_image = Image(source='scene.png', allow_stretch=True, keep_ratio=False)
-        self.btn = Button(text="Jogar", font_size=30, size_hint=(None, None), size=(200, 100),
+        self.btn = Button(text="Jogar", font_size=30, size_hint=(None, None), size=(300, 200),
                           pos_hint={'center_x': 0.5, 'center_y': 0.33}, background_color=(0, 65, 0, 1),
                           color=(0, 0, 0, 1))
 
