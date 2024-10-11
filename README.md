@@ -8,7 +8,7 @@ Durante o desenvolvimento deste projeto, os participantes terão a oportunidade 
 
 ## Linguagens de Programação
 As linguagens de programação abordadas neste projeto incluem, mas não estão limitadas a:
-- **Java**
+- **JavaScript**
 - **Python**
 - **JavaScript**
 - **SQL**
@@ -51,7 +51,7 @@ During the development of this project, participants will have the opportunity t
 
 ## Programming Languages
 The programming languages covered in this project include, but are not limited to:
-- **Java**
+- **JavaScript**
 - **Python**
 - **JavaScript**
 - **SQL**
