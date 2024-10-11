@@ -11,7 +11,6 @@ As linguagens de programação abordadas neste projeto incluem, mas não estão 
 - **Java**
 - **Python**
 - **JavaScript**
-- **C#**
 - **SQL**
 - **HTML & CSS**
 
@@ -38,4 +37,47 @@ Para mais informações, entre em contato com a equipe de desenvolvimento atrav�
 
 ---
 
-**Fábrica de Software - Análise e Desenvolvimento de Sistemas** 
+**Fábrica de Software - Análise e Desenvolvimento de Sistemas**
+
+---
+
+# Software Factory / Systems Analysis and Development
+
+## Objective
+The main objective of this project is to deliver an integrated system that meets the specific needs of the client, while providing a practical learning environment in various programming languages.
+
+## Learning
+During the development of this project, participants will have the opportunity to learn and apply concepts in various programming languages, acquiring valuable skills and practical experience in software development.
+
+## Programming Languages
+The programming languages covered in this project include, but are not limited to:
+- **Java**
+- **Python**
+- **JavaScript**
+- **SQL**
+- **HTML & CSS**
+
+## Project Structure
+The project will be divided into several phases, each focusing on different aspects of software development, including:
+1. **Requirements Analysis**: Understanding and documenting the client's needs.
+2. **Planning and Design**: Creating a detailed plan and system design.
+3. **Development**: Implementing the system using the taught programming languages.
+4. **Testing**: Conducting rigorous tests to ensure system quality.
+5. **Delivery**: Delivering the finalized system to the client.
+
+## Contribution
+All participants are encouraged to contribute to the project, collaborating in different phases and sharing knowledge. Collaboration is essential for the success of this project and the growth of all involved.
+
+## Integrative Project
+For more details about the integrative project, access the [project link](https://senachub.ms.senac.br/fabricas/).
+
+## Contact
+For more information, contact the development team via [email](gleisonmorais06@gmail.com).
+
+---
+
+> "The best way to predict the future is to invent it." - Alan Kay
+
+---
+
+**Software Factory - Systems Analysis and Development**
